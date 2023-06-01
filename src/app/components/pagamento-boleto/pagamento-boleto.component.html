@@ -1,0 +1,84 @@
+<div class="cadastro-form">   
+  <div class="title" >
+    <h2><i class="fas fa-file-invoice icon-boleto"></i>BOLETO</h2>
+    <button class="btn-close" (click)="close()"><i class="fas fa-times icon-close"></i></button>
+  </div> 
+    <form (ngSubmit)="registerUser()">
+      <div class="form-group">
+        <!-- <label for="firstName">Nome completo:</label> -->
+        <input type="text" id="firstName" [(ngModel)]="user.firstName" name="firstName" required placeholder="Nome completo">
+      </div>
+      
+      
+      
+      <div class="form-group">
+        <!-- <label for="email">E-mail:</label> -->
+        <input type="email" id="email" [(ngModel)]="user.email" name="email" required placeholder="Ex: email@gmail.com">
+      </div>
+      
+
+      <div class="form-group">
+        <!-- <label for="zipcode">CPF / CNPJ:</label> -->
+        <input type="number" id="cpf" [(ngModel)]="user.cpf" name="cpf" required placeholder="CPF / CNPJ">
+      </div>
+      
+      
+      
+      
+      <div class="form-group">
+        <!-- <label for="address">Endereço:</label> -->
+        <input type="text" id="address" [(ngModel)]="user.address" name="address" required placeholder="Endereço completo"> 
+      </div>
+      
+      
+      
+      <div class="form-group">
+        <!-- <label for="city">Cidade:</label> -->
+        <input type="text" id="city" [(ngModel)]="user.city" name="city" required placeholder="Cidade">
+      </div>
+      
+      <div class="form-group">
+        <label for="plano">Plano:</label>
+        <select id="plano" [(ngModel)]="user.plano" name="plano" required>
+          <option value="">Selecione o plano</option>
+          <option *ngFor="let plano of planos" [value]="plano">{{ plano }}</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <!-- <label for="zipcode">CEP:</label> -->
+        <input type="number" id="cep" [(ngModel)]="user.cep" name="cep" required placeholder="CEP">
+      </div>
+      
+      <div class="form-group">
+        <!-- <label for="state">Estado:</label> -->
+        <input type="text" id="state" [(ngModel)]="user.state" name="state" required placeholder="Cidade e Estado">
+      </div>
+      
+     
+      
+      
+      
+      <!-- <div class="checkbox-group">
+        <input type="checkbox" id="usPerson" [(ngModel)]="user.usPerson" name="usPerson" required>
+        <label for="usPerson">Ao criar uma conta, li a definição de pessoa dos EUA nos Termos e Condições e conforme descrito em 17 CFR 230.902. Concordo em não realizar transações como um cidadão dos EUA ou representar um cidadão dos EUA para fazer transações em seu nome. Também concordo em interromper o acesso e o uso dos serviços da INFINITX assim que me tornar um cidadão dos EUA ou realizar uma transação para um cidadão dos EUA.</label>
+      </div>
+      
+      <div class="checkbox-group">
+        <input type="checkbox" id="terms" [(ngModel)]="user.terms" name="terms" required>
+        <label for="terms">Ao clicar em 'Confirmar e prosseguir', concordo com os Termos de Acordo do Usuário, Política de Privacidade, Processamento de Execução de Ordens, Política de anti-lavagem de dinheiro e Divulgação de Risco.</label>
+      </div>
+      
+      <div class="checkbox-group">
+        <input type="checkbox" id="receiveNews" [(ngModel)]="user.receiveNews" name="receiveNews">
+        <label for="receiveNews">Gostaria de receber por e-mail notícias diárias e atualizações recentes que melhoram a qualidade do seu serviço.</label>
+      </div>
+      
+      <div class="checkbox-group">
+        <input type="checkbox" id="receiveMarketUpdates" [(ngModel)]="user.receiveMarketUpdates" name="receiveMarketUpdates">
+        <label for="receiveMarketUpdates">Eu autorizo receber as atualizações diárias do mercado por SMS.</label>
+      </div> -->
+      
+      <button type="submit" >Confirmar e Prosseguir</button>
+    </form>
+  </div>
